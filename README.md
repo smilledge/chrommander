@@ -36,14 +36,14 @@ Loads a page and returns the document's innerHTML.
 | Name | Description |
 |---|---|
 | **url** | **(Required)** URL to load and return the document's HTML |
-| **block** | Comma separated list of url's or url patterns (supports wildcards, eg `*.js`) that will be used to block network requests. You cal also use the following groups; `scripts`, `styles`, `media`, `fonts`. Or to block all non-document assets you can use `assets`. |
+| **block** | Comma separated list of url's or url patterns (supports wildcards, eg `*.js`) that will be used to block network requests. You can also use the following groups; `scripts`, `styles`, `media`, `fonts`. Or to block all non-document assets you can use `assets`. |
 
 #### Example Request
 
 ```
 [GET] http://localhost:8090/dom?url=http://google.com&block=media,styles,*analytics*
 ```
-(Make sure you URI encode the url param)
+(Make sure you encode the query string params if they require it)
 
 #### Success Response
 
@@ -53,7 +53,7 @@ Loads a page and returns the document's innerHTML.
     "startTime": 123456788,
     "endTime": 123456789,
     "totalTime": 1,
-    "totalRequets": 12,
+    "totalRequests": 12,
     "requests": [
         "http://example.com/example",
         ...
